@@ -2,6 +2,8 @@ results/
 *.log
 .env
 .env.*
+.env.local
+results/delivery-b4-live-smoke/
 !.env.example
 node_modules/
 .venv/
