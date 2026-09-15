@@ -16,5 +16,6 @@
 - 组合失败时退回 Composer 或重新定义 Adapter，不把失败代码移入主系统；
 - Integration 代码不得被 `H:\studybuddy` import；
 - 运行数据和凭据只放 `results/` 或 `H:\studybuddy-test`，且必须脱敏。
+- delivery live smoke 的真实凭据统一放 `results/.env.local`（2026-09-15 从仓库根 `.env.local` 迁入，三个 live_smoke 脚本已同步改路径；旧根级 `.env.local.bak` 冗余副本已删除）。
 
 通过组合测试后，主系统仍需独立实现正式边界和用户路径验收。

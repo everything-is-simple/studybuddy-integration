@@ -63,7 +63,7 @@ def _send_feishu(url: str, key: str) -> None:
 
 def main() -> int:
     started = time.perf_counter()
-    env = _load_env(ROOT / ".env.local")
+    env = _load_env(ROOT / "results" / ".env.local")
     webhook = _value(env, "FEISHU_WEBHOOK_URL")
     result: dict[str, object] = {
         "schema_version": 1,

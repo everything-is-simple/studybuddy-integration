@@ -91,7 +91,7 @@ def _send_email(host: str, user: str, auth_code: str, recipient: str, key: str) 
 
 def main() -> int:
     started = time.perf_counter()
-    env = _load_env(ROOT / ".env.local")
+    env = _load_env(ROOT / "results" / ".env.local")
     config = {k: _value(env, k) for k in ("SMTP_HOST", "SMTP_USER", "SMTP_AUTH_CODE", "SMTP_TO")}
     
     result: dict[str, object] = {

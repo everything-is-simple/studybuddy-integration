@@ -8,3 +8,5 @@ results/delivery-b4-live-smoke/
 node_modules/
 .venv/
 dist/
+__pycache__/
+*.pyc

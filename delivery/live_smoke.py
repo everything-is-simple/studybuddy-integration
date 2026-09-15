@@ -105,7 +105,7 @@ def _write_result(result: dict[str, object]) -> None:
 
 def main() -> int:
     started = time.perf_counter()
-    env = _load_env(ROOT / ".env.local")
+    env = _load_env(ROOT / "results" / ".env.local")
     config = {key: _value(env, key) for key in ("SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_AUTH_CODE", "SMTP_TO", "FEISHU_WEBHOOK_URL")}
     attempted = {"smtp": False, "feishu": False}
     result: dict[str, object] = {
